@@ -1,0 +1,13 @@
+server {
+	# root folder for virtual site
+	root /var/www/htdocs/satellite;
+	
+	# logging
+	access_log /var/log/nginx/satellite-access.log;
+	error_log /var/log/nginx/satellite-error.log;
+
+	# templates
+	include /etc/nginx/templates/default;
+	include /etc/nginx/templates/php;
+	#include /etc/nginx/templates/phpmyadmin;
+}
